@@ -12,7 +12,7 @@ root = lxml.html.fromstring(html)
 
 
 for i in root.cssselect("span[property='name']"):
-    print i
+    print i.text
     
 #
 # # Write out to the sqlite database using scraperwiki library
