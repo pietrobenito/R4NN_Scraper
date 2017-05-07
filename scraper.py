@@ -9,12 +9,10 @@ html = scraperwiki.scrape("http://www.bbc.co.uk/radio4/programmes/schedules")
 #
 # # Find something on the page using css selectors
 root = lxml.html.fromstring(html)
-root.cssselect("span[property='name']")
 
-for i in root:
+
+for i in root.cssselect("span[property='name']"):
     print i
-    for j in head:
-        print j
     
 #
 # # Write out to the sqlite database using scraperwiki library
